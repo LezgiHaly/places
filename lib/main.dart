@@ -27,9 +27,7 @@ class MyFirstWidget extends StatelessWidget {
     print(counter);
 
     // ignore: unused_element
-     context1() {
-      return context.runtimeType;
-    }
+    Type getContextType() => context.runtimeType;
 
     return Container(
       child: Center(child: Text('HI!')),
@@ -49,9 +47,7 @@ class _MySecondWidgateState extends State<MySecondWidgate> {
   @override
   Widget build(BuildContext context) {
     // ignore: unused_element
-    context2() {
-      return context.runtimeType;
-    }
+    Type getContextType() => context.runtimeType;
 
     counter++;
     print(counter);
