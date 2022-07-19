@@ -12,6 +12,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       title: 'Place',
       home: MyFirstWidget(),
     );
@@ -25,6 +26,7 @@ class MyFirstWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     counter++;
     print(counter);
+
 
     // ignore: unused_element
     Type getContextType() => context.runtimeType;
@@ -42,6 +44,7 @@ class MySecondWidgate extends StatefulWidget {
   State<MySecondWidgate> createState() => _MySecondWidgateState();
 }
 
+
 class _MySecondWidgateState extends State<MySecondWidgate> {
   var counter = 0;
   @override
@@ -53,6 +56,7 @@ class _MySecondWidgateState extends State<MySecondWidgate> {
     print(counter);
     return Container(
       child: Center(child: Text('HI!')),
+
     );
   }
 }
