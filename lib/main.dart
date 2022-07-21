@@ -1,8 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-
-import 'ui/screen/sight_list_screen.dart';
+import 'package:places/ui/screen/sight_list_screen.dart';
 
 void main() {
   runApp(App());
