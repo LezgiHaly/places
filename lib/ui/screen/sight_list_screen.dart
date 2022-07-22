@@ -32,53 +32,13 @@ Widget testWidget() {
 }
 
 Widget appBarTitle() {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      RichText(
-        text: TextSpan(
-          text: 'С',
-          style: TextStyle(
-            fontSize: 32,
-            color: Colors.green,
-            fontFamily: 'Roboto',
-            fontWeight: FontWeight.w700,
-          ),
-          children: [
-            TextSpan(
-              text: 'писок',
-              style: TextStyle(
-                fontSize: 32,
-                color: Colors.black,
-                fontFamily: 'Roboto',
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-          ],
-        ),
-      ),
-      RichText(
-        text: TextSpan(
-          text: 'и',
-          style: TextStyle(
-            fontSize: 32,
-            color: Colors.yellow,
-            fontFamily: 'Roboto',
-            fontWeight: FontWeight.w700,
-          ),
-          children: [
-            TextSpan(
-              text: 'нтересных мест',
-              style: TextStyle(
-                fontSize: 32,
-                color: Colors.black,
-                fontFamily: 'Roboto',
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-          ],
-        ),
-      )
-    ],
+  return Text(
+    'Список \nинтересных мест',
+    style: TextStyle(
+      fontSize: 32,
+      color: Colors.black,
+      fontFamily: 'Roboto',
+      fontWeight: FontWeight.w700,
+    ),
   );
 }
