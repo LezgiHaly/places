@@ -27,18 +27,58 @@ class _SightListScreenState extends State<SightListScreen> {
 
 Widget testWidget() {
   return Center(
-    child: Text("Hello!"),
+    child: Text("Hi!"),
   );
 }
 
 Widget appBarTitle() {
-  return Text(
-    'Список \nинтересных мест',
-    style: TextStyle(
-      fontSize: 32,
-      color: Colors.black,
-      fontFamily: 'Roboto',
-      fontWeight: FontWeight.w700,
-    ),
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      RichText(
+        text: TextSpan(
+          text: 'С',
+          style: TextStyle(
+            fontSize: 32,
+            color: Colors.green,
+            fontFamily: 'Roboto',
+            fontWeight: FontWeight.w700,
+          ),
+          children: [
+            TextSpan(
+              text: 'писок',
+              style: TextStyle(
+                fontSize: 32,
+                color: Colors.black,
+                fontFamily: 'Roboto',
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ],
+        ),
+      ),
+      RichText(
+        text: TextSpan(
+          text: 'и',
+          style: TextStyle(
+            fontSize: 32,
+            color: Colors.yellow,
+            fontFamily: 'Roboto',
+            fontWeight: FontWeight.w700,
+          ),
+          children: [
+            TextSpan(
+              text: 'нтересных мест',
+              style: TextStyle(
+                fontSize: 32,
+                color: Colors.black,
+                fontFamily: 'Roboto',
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ],
+        ),
+      )
+    ],
   );
 }
