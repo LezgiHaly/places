@@ -41,6 +41,13 @@ flutter:
   
   assets:
     - res/
+    - res/images/icons/heart.svg
+    - res/images/icons/ARROW.svg
+    - res/images/icons/Union.svg
+    - res/images/icons/Vector 95.svg
+    - res/images/icons/favorite.svg
+    - res/images/icons/calendar.svg
+
   fonts:
    - family: Roboto
      fonts:
