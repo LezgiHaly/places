@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:places/mocks.dart';
 
-import 'package:places/ui/screen/sight_card.dart';
+import 'package:places/ui/screen/sight_card_screen/sight_card.dart';
+import 'package:places/ui/widget/app_bar_title.dart';
 
 class SightListScreen extends StatefulWidget {
   const SightListScreen({Key? key}) : super(key: key);
@@ -22,71 +23,13 @@ class _SightListScreenState extends State<SightListScreen> {
         backgroundColor: Colors.white,
         centerTitle: false,
         toolbarHeight: 150,
-        title: appBarTitle(),
+        title: const AppBartitle(),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: mocks.map((sight) => SightCard(sight: sight)).toList(),
         ),
       ),
-    );
-  }
-
-  Widget testWidget() {
-    return Center(
-      child: Text("Hi!"),
-    );
-  }
-
-  Widget appBarTitle() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        RichText(
-          text: TextSpan(
-            text: 'С',
-            style: TextStyle(
-              fontSize: 32,
-              color: Colors.black,
-              fontFamily: 'Roboto',
-              fontWeight: FontWeight.w700,
-            ),
-            children: [
-              TextSpan(
-                text: 'писок',
-                style: TextStyle(
-                  fontSize: 32,
-                  color: Colors.black,
-                  fontFamily: 'Roboto',
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ],
-          ),
-        ),
-        RichText(
-          text: TextSpan(
-            text: 'и',
-            style: TextStyle(
-              fontSize: 32,
-              color: Colors.black,
-              fontFamily: 'Roboto',
-              fontWeight: FontWeight.w700,
-            ),
-            children: [
-              TextSpan(
-                text: 'нтересных мест',
-                style: TextStyle(
-                  fontSize: 32,
-                  color: Colors.black,
-                  fontFamily: 'Roboto',
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ],
-          ),
-        )
-      ],
     );
   }
 }

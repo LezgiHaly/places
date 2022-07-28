@@ -1,9 +1,26 @@
+/// Интересное место
 class Sight {
-  var name;
-  var lat;
-  var lon;
-  var url;
-  var type;
-  var details;
-  Sight(this.name, this.lat, this.lon, this.type, this.url, this.details);
+  final String name;
+
+  final double lat;
+
+  final double lon;
+
+  final String url;
+
+  final String type;
+
+  final String details;
+
+  final String annotation;
+
+  const Sight({
+    required this.name,
+    required this.lat,
+    required this.lon,
+    required this.type,
+    required this.url,
+    required this.details,
+    required this.annotation,
+  });
 }
