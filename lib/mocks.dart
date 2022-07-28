@@ -40,7 +40,7 @@ final List<Sight> mocks = [
   const Sight(
     name: 'Парк им. Ленинского Комсомола',
     lat: 42.985375,
-    lon: 47.487340,
+    lon: 47.487341,
     type: 'парк',
     url: 'http://xn----7sbbaaap7a4alg3i1a.xn--p1ai/images/news/7/1.jpg',
     details:

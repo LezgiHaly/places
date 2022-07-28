@@ -26,59 +26,63 @@ class SightCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
         ),
         width: 328,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Stack(
-              children: [
-                ClipRRect(
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(16),
-                    topRight: Radius.circular(16),
-                  ),
-                  child: ImageCardWidget(
-                    sight: sight,
-                  ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 16,
-                        top: 16,
-                      ),
-                      child: TypeCardWidget(
-                        sight: sight,
-                      ),
+        // height: 200,
+        child: AspectRatio(
+          aspectRatio: 3 / 2,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Stack(
+                children: [
+                  ClipRRect(
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(16),
+                      topRight: Radius.circular(16),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.only(top: 19, right: 16),
-                      child: FavoriteButtonCardWidget(),
+                    child: ImageCardWidget(
+                      sight: sight,
                     ),
-                  ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          left: 16,
+                          top: 16,
+                        ),
+                        child: TypeCardWidget(
+                          sight: sight,
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 19, right: 16),
+                        child: FavoriteButtonCardWidget(),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 16,
                 ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 16,
+                child: NameCardButtonWidget(
+                  sight: sight,
+                ),
               ),
-              child: NameCardButtonWidget(
-                sight: sight,
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 16,
+                  bottom: 12,
+                  right: 4,
+                ),
+                child: AnnotationCardWidget(
+                  sight: sight,
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 16,
-                bottom: 12,
-                right: 4,
-              ),
-              child: AnnotationCardWidget(
-                sight: sight,
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

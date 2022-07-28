@@ -18,12 +18,16 @@ class _SightListScreenState extends State<SightListScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        centerTitle: false,
-        toolbarHeight: 150,
-        title: const AppBartitle(),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(150),
+        child: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          centerTitle: false,
+          toolbarHeight: 150,
+          title:
+              const AppBartitle(), // ? как опусть надпись ближе к картам интерсных мест?
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
