@@ -9,11 +9,11 @@ class ImageCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 328,
+      width: double.infinity,
       height: 94,
       child: Image.network(
         sight.url,
-        fit: BoxFit.cover,
+        fit: BoxFit.fill,
       ),
     );
   }

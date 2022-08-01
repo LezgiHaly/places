@@ -42,59 +42,51 @@ class SightDetails extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(
-                left: 16,
-                top: 24,
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16,
               ),
-              child: NameLocationWidget(sight: sight),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 2, left: 16),
-              child: Row(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TypeLocationWidget(sight: sight),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 14),
-                    child: WorkTimeWidget(sight: sight),
+                  const SizedBox(
+                    height: 24,
                   ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                top: 24,
-                left: 16,
-                right: 16,
-              ),
-              child: DatailLocationWidget(sight: sight),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(
-                top: 24,
-                left: 16,
-                right: 16,
-              ),
-              child: ButtonRouteWidget(),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                top: 24,
-                left: 16,
-              ),
-              child: SvgPicture.asset(
-                AppAssets.line,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                top: 18,
-                left: 16,
-                right: 16,
-              ),
-              child: Row(
-                children: const [
-                  PlanningButton(),
-                  ToFavoritesButtonWidget(),
+                  NameLocationWidget(sight: sight),
+                  const SizedBox(
+                    height: 2,
+                  ),
+                  Row(
+                    children: [
+                      TypeLocationWidget(sight: sight),
+                      const SizedBox(
+                        width: 14,
+                      ),
+                      WorkTimeWidget(sight: sight),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 24,
+                  ),
+                  DatailLocationWidget(sight: sight),
+                  const SizedBox(
+                    height: 24,
+                  ),
+                  const ButtonRouteWidget(),
+                  const SizedBox(
+                    height: 24,
+                  ),
+                  SvgPicture.asset(
+                    AppAssets.line,
+                  ),
+                  const SizedBox(
+                    height: 18,
+                  ),
+                  Row(
+                    children: const [
+                      PlanningButton(),
+                      ToFavoritesButtonWidget(),
+                    ],
+                  ),
                 ],
               ),
             ),

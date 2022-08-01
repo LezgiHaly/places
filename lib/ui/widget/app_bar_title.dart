@@ -8,10 +8,12 @@ class AppBartitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.bottomLeft,
-      child: Text(
-        AppStrings.appBar,
-        style: AppTypography.textText32Bold.copyWith(
-          color: AppColors.appColor,
+      child: SafeArea(
+        child: Text(
+          AppStrings.appBar,
+          style: AppTypography.textText32Bold.copyWith(
+            color: AppColors.appColor,
+          ),
         ),
       ),
     );
