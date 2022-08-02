@@ -14,6 +14,11 @@ class ImageCardWidget extends StatelessWidget {
       child: Image.network(
         sight.url,
         fit: BoxFit.fill,
+        loadingBuilder: (context, child, loadingProgress) {
+          return loadingProgress == null
+              ? child
+              : const Center(child: CircularProgressIndicator());
+        },
       ),
     );
   }
