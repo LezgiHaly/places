@@ -17,6 +17,11 @@ class ImageWidget extends StatelessWidget {
       width: double.infinity,
       height: 360,
       fit: BoxFit.fill,
+      loadingBuilder: (context, child, loadingProgress) {
+        return loadingProgress == null
+            ? child
+            : const Center(child: CircularProgressIndicator());
+      },
     );
   }
 }
