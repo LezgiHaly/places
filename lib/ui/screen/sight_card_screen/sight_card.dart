@@ -20,8 +20,7 @@ class SightCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16),
-      // ignore: use_decorated_box
-      child: Container(
+      child: DecoratedBox(
         decoration: BoxDecoration(
           color: AppColors.cardBackColor,
           borderRadius: BorderRadius.circular(15),
