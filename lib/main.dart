@@ -18,37 +18,47 @@ class App extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: AppStrings.appTitle,
-      home: HomePage(),
+      home: _HomePage(),
     );
   }
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class _HomePage extends StatefulWidget {
+  const _HomePage({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<_HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
-  int selectedIndex = 0;
-  Widget _listSkrins = const SightListScreen();
-  Widget _map = const Center(
-    child: Text('Map Screen'),
-  );
+class _HomePageState extends State<_HomePage>
+    with SingleTickerProviderStateMixin {
+  TabController? tabController;
+  @override
+  void initState() {
+    super.initState();
+    tabController = TabController(length: 4, vsync: this);
+    tabController?.addListener(() {
+      setState(() {});
+    });
+    // ? не могу понять почему он ругается
+  }
 
-  Widget _favorite = const VisitingScreen();
-  Widget _setting = const Center(
-    child: Text('Setting Screen'),
-  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: getBody(),
+      body: TabBarView(controller: tabController, children: const [
+        SightListScreen(),
+        Center(child: Text('Map Scrren')),
+        VisitingScreen(),
+        Center(child: Text('Setting Screen')),
+      ]),
       bottomNavigationBar: BottomNavigationBar(
+        selectedFontSize: 12,
         showSelectedLabels: false,
-        currentIndex: selectedIndex,
-        type: BottomNavigationBarType.fixed,
+        currentIndex: tabController!.index,
+        onTap: (currentIndex) {
+          tabController?.animateTo(currentIndex);
+        },
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
@@ -81,26 +91,7 @@ class _HomePageState extends State<HomePage> {
             label: '',
           ),
         ],
-        onTap: onTapHandler,
       ),
     );
-  }
-
-  Widget getBody() {
-    if (selectedIndex == 0) {
-      return _listSkrins;
-    } else if (selectedIndex == 1) {
-      return _map;
-    } else if (selectedIndex == 2) {
-      return _favorite;
-    } else {
-      return _setting;
-    }
-  }
-
-  void onTapHandler(int index) {
-    setState(() {
-      selectedIndex = index;
-    });
   }
 }
