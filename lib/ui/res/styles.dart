@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppStrings {
+  static const appTitleFavorit = 'Избранное';
   static const appTitle = 'Place';
   static const appBar = '''
   Список 
@@ -10,6 +11,17 @@ class AppStrings {
   static const workTime = 'закрыто до 9:00';
   static const toFavorites = 'В Избранное';
   static const toPlan = 'Запланировать';
+  static const planningDate = 'Запланировано на 12 окт. 2020';
+  static const wantToVisit = 'Хочу посетить';
+  static const visited = 'Посетил';
+  static const textEmty = 'Пусто';
+  static const markPlace = '''
+Отмечайте понравившиеся
+места и они появиятся здесь.''';
+  static const goalAcheced = 'Цель достигнута 12 окт. 2020';
+  static const complateTheRout = '''
+Завершите маршрут,
+чтобы место попало сюда.''';
 }
 
 class AppAssets {
@@ -19,6 +31,13 @@ class AppAssets {
   static const route = 'res/images/icons/Union.svg';
   static const buttonBack = 'res/images/icons/ARROW.svg';
   static const line = 'res/images/icons/Vector 95.svg';
+  static const icCalendar = 'res/images/icons/icCalendar.svg';
+  static const icHeartFull = 'res/images/icons/icHeartFull.svg';
+  static const icMap = 'res/images/icons/icMap.svg';
+  static const icSettings = 'res/images/icons/icSettings.svg';
+  static const icDelite = 'res/images/icons/icDelite.svg';
+  static const icCard = 'res/images/icons/icCard.svg';
+  static const icShare = 'res/images/icons/icShare.svg';
 }
 
 class AppTypography {
@@ -41,6 +60,11 @@ class AppTypography {
     fontSize: 14.0,
     height: 1.18,
     fontWeight: FontWeight.w400,
+  );
+  static const textText18Medium = TextStyle(
+    fontSize: 18.0,
+    height: 1.18,
+    fontWeight: FontWeight.w500,
   );
   static const textText14Bold = TextStyle(
     fontSize: 14.0,

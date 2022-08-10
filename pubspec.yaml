@@ -36,6 +36,15 @@ flutter:
     - res/images/icons/Vector 95.svg
     - res/images/icons/favorite.svg
     - res/images/icons/calendar.svg
+    - res/images/icons/icCalendar.svg
+    - res/images/icons/icHeartFull.svg
+    - res/images/icons/icMap.svg
+    - res/images/icons/icSettings.svg
+    - res/images/icons/icDelite.svg
+    - res/images/icons/icShare.svg
+    - res/images/icons/icCard.svg
+
+    
 
   fonts:
    - family: Roboto
