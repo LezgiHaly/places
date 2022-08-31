@@ -19,15 +19,12 @@ class _VisitingScreenState extends State<VisitingScreen> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        backgroundColor: AppColors.textWhiteColor,
         appBar: AppBar(
           toolbarHeight: 122,
           elevation: 0,
-          backgroundColor: AppColors.textWhiteColor,
-          title: Text(
+          title: const Text(
             AppStrings.appTitleFavorit,
-            style: AppTypography.textText18Medium
-                .copyWith(color: AppColors.appColor),
+            style: AppTypography.textText18Medium,
           ),
           bottom: PreferredSize(
             preferredSize: Size.zero,
@@ -35,17 +32,18 @@ class _VisitingScreenState extends State<VisitingScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: DecoratedBox(
                 decoration: BoxDecoration(
-                  color: AppColors.cardBackColor,
+                  color: Theme.of(context).cardColor,
                   borderRadius: BorderRadius.circular(40),
                 ),
                 child: TabBar(
+                  labelColor: Theme.of(context).tabBarTheme.labelStyle?.color,
                   unselectedLabelColor:
-                      AppColors.textGrayColor.withOpacity(0.5),
-                  indicator: const BoxDecoration(
-                    borderRadius: BorderRadius.all(
+                      Theme.of(context).textTheme.bodyText1?.color,
+                  indicator: BoxDecoration(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(40),
                     ),
-                    color: AppColors.appColor,
+                    color: Theme.of(context).tabBarTheme.labelColor,
                   ),
                   tabs: const [
                     Tab(
@@ -56,7 +54,7 @@ class _VisitingScreenState extends State<VisitingScreen> {
                     ),
                     Tab(
                       child: Text(
-                        AppStrings.wantToVisit,
+                        AppStrings.visited,
                         style: AppTypography.textText14Bold,
                       ),
                     ),

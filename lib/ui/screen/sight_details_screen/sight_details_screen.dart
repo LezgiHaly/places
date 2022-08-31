@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:places/domain/sight.dart';
 import 'package:places/ui/res/styles.dart';
+import 'package:places/ui/res/themes.dart';
 import 'package:places/ui/screen/sight_details_screen/widget/Image_widget.dart';
 import 'package:places/ui/screen/sight_details_screen/widget/button_back_widget.dart';
 import 'package:places/ui/screen/sight_details_screen/widget/button_route_widget.dart';
@@ -24,7 +25,6 @@ class SightDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

@@ -12,9 +12,7 @@ class DatailLocationWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       sight.details,
-      style: AppTypography.textText14Regular.copyWith(
-        color: AppColors.appColor,
-      ),
+      style: AppTypography.textText14Regular,
     );
   }
 }

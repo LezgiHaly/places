@@ -12,9 +12,7 @@ class NameLocationWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       sight.name,
-      style: AppTypography.textText24Bold.copyWith(
-        color: AppColors.appColor,
-      ),
+      style: AppTypography.textText24Bold,
     );
   }
 }

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:places/ui/res/styles.dart';
 
 // AppBar
+
 // ignore: unused_element
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   const AppBarWidget({Key? key}) : super(key: key);
@@ -12,7 +13,6 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
-      backgroundColor: Colors.white,
       centerTitle: false,
       toolbarHeight: 150,
       title: const _AppBartitle(),
@@ -29,14 +29,11 @@ class _AppBartitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
+    return const Align(
       alignment: Alignment.bottomLeft,
       child: SafeArea(
         child: Text(
           AppStrings.appBar,
-          style: AppTypography.textText32Bold.copyWith(
-            color: AppColors.appColor,
-          ),
         ),
       ),
     );

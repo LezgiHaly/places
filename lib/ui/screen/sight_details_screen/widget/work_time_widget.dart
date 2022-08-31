@@ -12,7 +12,7 @@ class WorkTimeWidget extends StatelessWidget {
     return Text(
       AppStrings.workTime,
       style: AppTypography.textText14Regular.copyWith(
-        color: AppColors.textGrayColor,
+        color: Theme.of(context).textTheme.bodyText1?.color,
       ),
     );
   }

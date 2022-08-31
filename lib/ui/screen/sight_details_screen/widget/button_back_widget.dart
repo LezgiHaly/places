@@ -19,7 +19,7 @@ class ButtonBackWidget extends StatelessWidget {
         minimumSize: Size.zero,
         padding: EdgeInsets.zero,
         elevation: 0,
-        primary: Colors.white,
+        primary: Theme.of(context).backgroundColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
