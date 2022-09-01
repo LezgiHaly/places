@@ -17,9 +17,8 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme:
-          // lightTheme,
-          darkTheme,
+      theme: lightTheme,
+      // darkTheme,
       debugShowCheckedModeBanner: false,
       title: AppStrings.appTitle,
       home: const _HomePage(),
@@ -41,14 +40,16 @@ class _HomePageState extends State<_HomePage>
   void initState() {
     super.initState();
     tabController = TabController(length: 4, vsync: this);
-    // ignore: unused_element
-    void dispose() {
-      tabController?.dispose();
-    }
 
     tabController?.addListener(() {
       setState(() {});
     });
+  }
+
+  @override
+  void dispose() {
+    tabController?.dispose();
+    super.dispose();
   }
 
   Color? getColor(int index, BuildContext context) {
