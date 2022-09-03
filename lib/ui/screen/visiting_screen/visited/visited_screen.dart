@@ -17,7 +17,7 @@ class VisitedScreen extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       child: DecoratedBox(
         decoration: BoxDecoration(
-          color: AppColors.cardBackColor,
+          // color: AppColors.cardBackColor,
           borderRadius: BorderRadius.circular(15),
         ),
         child: AspectRatio(

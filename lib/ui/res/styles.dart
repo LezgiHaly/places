@@ -74,9 +74,12 @@ class AppTypography {
 }
 
 class AppColors {
+  static const whiteColor = Color(0xFFFFFFFF);
   static const appColor = Color(0xFF3B3E5B);
+  static const colorDarkTheme = Color(0xff21222C);
   static const buttonColor = Color(0xFF4CAF50);
   static const cardBackColor = Color(0xFFF5F5F5);
   static const textGrayColor = Color(0xFF7C7E92);
   static const textWhiteColor = Color(0xFFFFFFFF);
+  static const blackDark = Color(0xff1A1A20);
 }

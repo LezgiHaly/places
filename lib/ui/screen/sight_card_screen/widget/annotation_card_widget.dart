@@ -13,7 +13,7 @@ class AnnotationCardWidget extends StatelessWidget {
     return Text(
       sight.annotation,
       style: AppTypography.textText14Regular.copyWith(
-        color: AppColors.textGrayColor,
+        color: Theme.of(context).textTheme.bodyText1?.color,
       ),
     );
   }

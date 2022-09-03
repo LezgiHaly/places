@@ -4,6 +4,7 @@ import 'package:places/ui/res/styles.dart';
 import 'package:places/ui/screen/sight_details_screen/sight_details_screen.dart';
 
 // Копка с именем интересного места
+
 class NameCardButtonWidget extends StatelessWidget {
   final Sight sight;
   const NameCardButtonWidget({Key? key, required this.sight}) : super(key: key);
@@ -22,16 +23,15 @@ class NameCardButtonWidget extends StatelessWidget {
         );
       },
       style: ElevatedButton.styleFrom(
+        primary: Theme.of(context).cardColor,
         minimumSize: Size.zero,
         padding: EdgeInsets.zero,
         elevation: 0,
-        primary: AppColors.cardBackColor,
       ),
       child: Text(
         sight.name,
-        style: AppTypography.textText16Regular.copyWith(
-          color: AppColors.appColor,
-        ),
+        style: AppTypography.textText16Regular
+            .copyWith(color: Theme.of(context).textTheme.bodyText2?.color),
       ),
     );
   }

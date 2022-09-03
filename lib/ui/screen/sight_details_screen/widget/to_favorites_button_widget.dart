@@ -13,7 +13,6 @@ class ToFavoritesButtonWidget extends StatelessWidget {
       onPressed: () {},
       style: ElevatedButton.styleFrom(
         elevation: 0,
-        primary: AppColors.textWhiteColor,
       ),
       child: Padding(
         padding: const EdgeInsets.only(
@@ -24,14 +23,13 @@ class ToFavoritesButtonWidget extends StatelessWidget {
             SvgPicture.asset(
               AppAssets.darkFavorite,
             ),
-            Padding(
-              padding: const EdgeInsets.only(
+            const Padding(
+              padding: EdgeInsets.only(
                 left: 10,
               ),
               child: Text(
                 AppStrings.toFavorites,
-                style: AppTypography.textText14Regular
-                    .copyWith(color: AppColors.appColor),
+                style: AppTypography.textText14Regular,
               ),
             ),
           ],

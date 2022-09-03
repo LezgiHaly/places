@@ -11,25 +11,22 @@ class PlanningButton extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         elevation: 0,
-        primary: AppColors.textWhiteColor,
       ),
       onPressed: () {},
       child: Row(
-        children: [
-          const Icon(
+        children: const [
+          Icon(
             Icons.calendar_month,
             size: 24,
             color: AppColors.textGrayColor,
           ),
           Padding(
-            padding: const EdgeInsets.only(
+            padding: EdgeInsets.only(
               left: 10,
             ),
             child: Text(
               AppStrings.toPlan,
-              style: AppTypography.textText14Regular.copyWith(
-                color: AppColors.textGrayColor,
-              ),
+              style: AppTypography.textText14Regular,
             ),
           ),
         ],

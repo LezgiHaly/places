@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:places/ui/res/styles.dart';
+import 'package:places/ui/res/themes.dart';
 import 'package:places/ui/screen/sight_list_screen.dart';
 import 'package:places/ui/screen/visiting_screen/visiting_screen.dart';
 
@@ -15,10 +16,12 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: lightTheme,
+      // darkTheme,
       debugShowCheckedModeBanner: false,
       title: AppStrings.appTitle,
-      home: _HomePage(),
+      home: const _HomePage(),
     );
   }
 }
@@ -37,12 +40,25 @@ class _HomePageState extends State<_HomePage>
   void initState() {
     super.initState();
     tabController = TabController(length: 4, vsync: this);
+
     tabController?.addListener(() {
       setState(() {});
     });
-    // ? не могу понять почему он ругается
   }
 
+  @override
+  void dispose() {
+    tabController?.dispose();
+    super.dispose();
+  }
+
+  Color? getColor(int index, BuildContext context) {
+    return tabController?.index == index
+        ? Theme.of(context).bottomNavigationBarTheme.selectedItemColor
+        : Theme.of(context).bottomNavigationBarTheme.unselectedItemColor;
+  }
+
+  // ignore: member-ordering-extended
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,6 +69,7 @@ class _HomePageState extends State<_HomePage>
         Center(child: Text('Setting Screen')),
       ]),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         selectedFontSize: 12,
         showSelectedLabels: false,
         currentIndex: tabController!.index,
@@ -65,6 +82,7 @@ class _HomePageState extends State<_HomePage>
               AppAssets.icCalendar,
               width: 22,
               height: 20,
+              color: getColor(0, context),
             ),
             label: '',
           ),
@@ -73,6 +91,7 @@ class _HomePageState extends State<_HomePage>
               AppAssets.icMap,
               width: 22,
               height: 20,
+              color: getColor(1, context),
             ),
             label: '',
           ),
@@ -81,12 +100,14 @@ class _HomePageState extends State<_HomePage>
               AppAssets.icHeartFull,
               width: 22,
               height: 20,
+              color: getColor(2, context),
             ),
             label: '',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               AppAssets.icSettings,
+              color: getColor(3, context),
             ),
             label: '',
           ),

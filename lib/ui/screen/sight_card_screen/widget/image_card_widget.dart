@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
 
 //Виджет картинки
+
 class ImageCardWidget extends StatelessWidget {
   final Sight sight;
   const ImageCardWidget({Key? key, required this.sight}) : super(key: key);

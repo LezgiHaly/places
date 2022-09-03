@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:places/mocks.dart';
+import 'package:places/ui/res/themes.dart';
 import 'package:places/ui/screen/sight_card_screen/sight_card.dart';
 import 'package:places/ui/widget/app_bar_widget.dart';
 
@@ -14,7 +15,6 @@ class _SightListScreenState extends State<SightListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       resizeToAvoidBottomInset: false,
       appBar: const AppBarWidget(),
       body: SingleChildScrollView(

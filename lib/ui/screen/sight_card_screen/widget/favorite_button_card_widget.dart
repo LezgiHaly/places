@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:places/ui/res/styles.dart';
 
 // кнопка добавления в избранное
+
 class FavoriteButtonCardWidget extends StatelessWidget {
   const FavoriteButtonCardWidget({Key? key}) : super(key: key);
 
