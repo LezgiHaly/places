@@ -1,4 +1,12 @@
+import 'package:places/domain/filter.dart';
+import 'package:places/domain/point.dart';
 import 'package:places/domain/sight.dart';
+import 'package:places/ui/res/styles.dart';
+
+const centerPoint = Point(
+  42.045639,
+  48.287276,
+);
 
 final List<Sight> mocks = [
   const Sight(
@@ -77,3 +85,27 @@ final List<Sight> mocksFavorites = [
 ];
 
 final List<Sight> mocksVisited = [];
+
+final List<Filter> mocksFilter = [
+  Filter(icon: AppAssets.icfilter6, name: 'Отель'),
+  Filter(
+    icon: AppAssets.icfilter1,
+    name: 'Ресторан',
+  ),
+  Filter(
+    icon: AppAssets.icfilter5,
+    name: 'Особое место',
+  ),
+  Filter(
+    icon: AppAssets.icfilter4,
+    name: 'Парк',
+  ),
+  Filter(
+    icon: AppAssets.icfilter3,
+    name: 'Музей',
+  ),
+  Filter(
+    icon: AppAssets.icfilter2,
+    name: 'Кафе',
+  ),
+];

@@ -43,6 +43,15 @@ flutter:
     - res/images/icons/icDelite.svg
     - res/images/icons/icShare.svg
     - res/images/icons/icCard.svg
+    - res/images/icons/filter1.svg
+    - res/images/icons/filter2.svg
+    - res/images/icons/filter3.svg
+    - res/images/icons/filter4.svg
+    - res/images/icons/filter5.svg
+    - res/images/icons/filter6.svg
+    - res/images/icons/IcInfo.svg
+    - res/images/icons/icButtonFilter.svg
+    - res/images/icons/icSearch.svg
 
     
 

@@ -29,6 +29,13 @@ final lightTheme = ThemeData(
     labelStyle: TextStyle(color: AppColors.whiteColor),
     labelColor: AppColors.appColor,
   ),
+  bottomSheetTheme: const BottomSheetThemeData(
+    backgroundColor: AppColors.buttonColor,
+  ),
+  sliderTheme: SliderThemeData(
+    activeTrackColor: AppColors.buttonColor,
+    inactiveTrackColor: AppColors.textGrayColor.withOpacity(0.56),
+  ),
 );
 
 final darkTheme = ThemeData(
@@ -58,5 +65,12 @@ final darkTheme = ThemeData(
   tabBarTheme: const TabBarTheme(
     labelStyle: TextStyle(color: AppColors.appColor),
     labelColor: AppColors.whiteColor,
+  ),
+  bottomSheetTheme: const BottomSheetThemeData(
+    backgroundColor: AppColors.buttonColor,
+  ),
+  sliderTheme: SliderThemeData(
+    activeTrackColor: AppColors.buttonColor,
+    inactiveTrackColor: AppColors.textGrayColor.withOpacity(0.56),
   ),
 );

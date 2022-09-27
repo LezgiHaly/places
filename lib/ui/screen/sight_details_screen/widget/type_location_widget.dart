@@ -12,9 +12,7 @@ class TypeLocationWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       sight.type,
-      style: AppTypography.textText14Bold.copyWith(
-          // color: AppColors.appColor,
-          ),
+      style: AppTypography.textText14Bold.copyWith(),
     );
   }
 }
