@@ -23,4 +23,9 @@ class Sight {
     required this.details,
     required this.annotation,
   });
+
+  @override
+  String toString() {
+    return name;
+  }
 }

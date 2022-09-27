@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:places/ui/res/styles.dart';
 import 'package:places/ui/res/themes.dart';
-import 'package:places/ui/screen/sight_list_screen.dart';
+import 'package:places/ui/screen/SettingsScreen/settings_screen.dart';
+import 'package:places/ui/screen/sight_list_screen/sight_list_screen.dart';
 import 'package:places/ui/screen/visiting_screen/visiting_screen.dart';
+
+final isDark = ValueNotifier(false);
 
 void main() {
   runApp(const App());
@@ -16,12 +19,17 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: lightTheme,
-      // darkTheme,
-      debugShowCheckedModeBanner: false,
-      title: AppStrings.appTitle,
-      home: const _HomePage(),
+    return ValueListenableBuilder<bool>(
+      valueListenable: isDark,
+      builder: (_, value, child) => MaterialApp(
+        theme: value ? darkTheme : lightTheme,
+        debugShowCheckedModeBanner: false,
+        title: AppStrings.appTitle,
+        home:
+            // const
+            // FiltersScreen(),
+            const _HomePage(),
+      ),
     );
   }
 }
@@ -66,7 +74,7 @@ class _HomePageState extends State<_HomePage>
         SightListScreen(),
         Center(child: Text('Map Scrren')),
         VisitingScreen(),
-        Center(child: Text('Setting Screen')),
+        SettingsScreen(),
       ]),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,

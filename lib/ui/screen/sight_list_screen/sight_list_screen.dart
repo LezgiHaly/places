@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/mocks.dart';
-import 'package:places/ui/res/themes.dart';
 import 'package:places/ui/screen/sight_card_screen/sight_card.dart';
+import 'package:places/ui/screen/sight_list_screen/widget/search_widget.dart';
 import 'package:places/ui/widget/app_bar_widget.dart';
 
 class SightListScreen extends StatefulWidget {
@@ -19,7 +19,15 @@ class _SightListScreenState extends State<SightListScreen> {
       appBar: const AppBarWidget(),
       body: SingleChildScrollView(
         child: Column(
-          children: mocks.map((sight) => SightCard(sight: sight)).toList(),
+          children: [
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: SearchWidget(),
+            ),
+            Column(
+              children: mocks.map((sight) => SightCard(sight: sight)).toList(),
+            ),
+          ],
         ),
       ),
     );
